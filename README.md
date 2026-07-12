@@ -65,6 +65,13 @@ history so multi-turn coreference works.
 - GPUs for the LLM (Qwen3.5-9B), STT, TTS, and anticipation models. The retrieval
   server is CPU-only.
 - Python 3.12, `uv`; Node.js for the frontend.
+- **Base install & deployment follow Kyutai Unmute.** SAGA reuses Unmute's
+  STT/TTS (moshi-server), environment, and service scaffolding, so for the
+  underlying setup — installing `moshi-server`, downloading the STT/TTS models,
+  Docker/`docker-compose`, and the general deployment layout — follow the
+  [**Unmute repository**](https://github.com/kyutai-labs/unmute) and its README.
+  This repo only adds the SAGA-specific pieces (agentic RAG handler, retrieval
+  server, live UI) and the launch scripts under `dockerless/` that wire them up.
 - The **retrieval server** serving code is included under `rag_server/` (FastAPI +
   FAISS + `bge-base`). It needs the **corpus data assets** — the FAISS indexes,
   payloads, and author index built from your paper corpus — which are *not*
@@ -77,6 +84,11 @@ history so multi-turn coreference works.
 
 Each model service grabs its own GPU and can live on a different node; a tunnel
 script forwards them all to `localhost`.
+
+> **Set up the base Unmute stack first** (moshi-server + STT/TTS models, Python
+> env, deployment) following the
+> [Unmute repo](https://github.com/kyutai-labs/unmute). The steps below are the
+> SAGA-specific launch on top of that.
 
 ```bash
 # 1. install
