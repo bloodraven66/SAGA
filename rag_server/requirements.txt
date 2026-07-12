@@ -1,0 +1,24 @@
+# Scraping
+requests
+beautifulsoup4
+
+# Embedding
+sentence-transformers
+torch
+
+# Vector store
+faiss-cpu        # swap for faiss-gpu if running on GPU
+
+# LLM pipeline
+anthropic
+vllm
+openai       # vLLM OpenAI-compatible client
+
+# RAG server
+fastapi
+uvicorn
+httpx
+
+# Utilities
+numpy
+tqdm

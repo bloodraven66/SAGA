@@ -1,0 +1,49 @@
+*.egg-info
+*.pyc
+.DS_Store
+
+debug/
+recordings/
+.venv/
+# only ignore voices/ in the root directory
+/voices/
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Traefik/HTTPS
+certs/
+
+volumes/
+CLAUDE.md
+.claude/settings.local.json
+dockerless/logs/endpointer.log dockerless/logs/ep_10.log dockerless/logs/ep_12.log dockerless/logs/ep_14.log dockerless/logs/ep_16.log dockerless/logs/ep_20.log dockerless/logs/ep.log dockerless/logs/ep.log.bak dockerless/logs/llm_10.log dockerless/logs/llm_12.log dockerless/logs/llm_12.log.bak dockerless/logs/llm_14.log dockerless/logs/llm_14.log.bak dockerless/logs/llm_20.log dockerless/logs/llm_20.log.bak dockerless/logs/llm_2.log dockerless/logs/llm_2.log.bak dockerless/logs/llm.log dockerless/logs/llm.log.bak dockerless/logs/start_endpointer_20251124_233059.log dockerless/logs/start_llm_20251124_232945.log dockerless/logs/start_llm_20251124_233007.log dockerless/logs/start_stt_20251124_233043.log dockerless/logs/start_tts_20251124_233051.log dockerless/logs/stt_10.log dockerless/logs/stt_12.log dockerless/logs/stt_20.log dockerless/logs/stt.log dockerless/logs/stt.log.bak dockerless/logs/tts_10.log dockerless/logs/tts_122159.log dockerless/logs/tts_12.log dockerless/logs/tts_14.log dockerless/logs/tts_20.log dockerless/logs/tts.log dockerless/logs/tts.log.bak
+wavs/input2.wav wavs/input_mix2.wav wavs/input_mix.wav wavs/input.wav wavs/output2.vad_plot.png wavs/output2.wav wavs/output_mix2.response.txt wavs/output_mix2_spk_first.response.txt wavs/output_mix2_spk_first.stereo.wav wavs/output_mix2_spk_first.transcript.txt wavs/output_mix2_spk_first.wav wavs/output_mix2.stereo.wav wavs/output_mix2.transcript.txt wavs/output_mix2.wav wavs/output_spk_first.response.txt wavs/output_spk_first.stereo.wav wavs/output_spk_first.transcript.txt wavs/output_spk_first.wav wavs/output.vad_plot.png wavs/output.wav
+wavs/*
+dockerless/logs/*
+results/*
+logs/*
+
+# large / transient artifacts (eval outputs, retired data, scratch)
+results_tmp/
+rag_data/
+analysis/
+endpointer_test_output.png
+
+# added for public release
+node_modules/
+__pycache__/
+*.egg-info/
+uv.lock.bak
+rag_server/data/
+data/embeds/
+logs/
+*.wav
+*.stereo.wav
