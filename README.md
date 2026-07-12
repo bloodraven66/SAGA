@@ -10,6 +10,12 @@ answer sourced from real papers.
 This repository hosts the core live system that accompanies our paper *(see
 [Citation](#citation))*.
 
+## Demos
+
+Sample recordings of full spoken conversations — the speculative opener, the
+grounded notes during retrieval, and the final answer — are in
+[`samples/`](samples/).
+
 ## What makes it different
 
 A normal voice RAG assistant is silent while it thinks — decompose the query,

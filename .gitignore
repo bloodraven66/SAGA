@@ -47,3 +47,5 @@ data/embeds/
 logs/
 *.wav
 *.stereo.wav
+# ...but DO keep demo recordings under samples/
+!samples/**
